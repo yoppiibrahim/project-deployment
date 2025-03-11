@@ -1,0 +1,54 @@
+2025-03-06 13:15:57.733 | INFO     | __main__:main:22 - running the aplication
+2025-03-06 13:15:57.762 | INFO     | model.model_builder:train_model:40 - checking the existence of the model config file at model\models/rf_db_v3
+2025-03-06 13:15:57.762 | INFO     | model.pipeline.model:build_model:34 - starting up model building pipeline
+2025-03-06 13:15:57.763 | INFO     | model.pipeline.preparation:prepare_data:16 - starting up preparation pipeline
+2025-03-06 13:15:57.763 | INFO     | model.pipeline.collection:load_data_from_db:25 - extracting the table from the database
+2025-03-06 13:15:57.804 | INFO     | model.pipeline.preparation:_decode_cat_cols:33 - encoding categorical colmn: ['balcony', 'parking', 'furnished', 'garage', 'storage']
+2025-03-06 13:15:57.815 | INFO     | model.pipeline.preparation:_parse_garden_col:52 - parsing garden column
+2025-03-06 13:15:57.818 | INFO     | model.pipeline.model:_get_x_y:81 - Defining X and y variable. X vars: ['area', 'constraction_year', 'bedrooms', 'garden', 'balcony_yes', 'parking_yes', 'furnished_yes', 'garage_yes', 'storage_yes'] Y var: rent
+2025-03-06 13:15:57.819 | INFO     | model.pipeline.model:_split_train_test:100 - Spliting data into train and test sets
+2025-03-06 13:15:57.823 | INFO     | model.pipeline.model:_train_model:113 - train the model with hyperparameters
+2025-03-06 13:15:57.823 | DEBUG    | model.pipeline.model:_train_model:116 - grid_space :{'n_estimators': [100, 200, 300], 'max_depth': [3, 6, 9, 12]}
+2025-03-06 13:16:48.998 | INFO     | model.pipeline.model:_evaluation_model:151 - evaluating model performance. SCORE=0.7141643430933349
+2025-03-06 13:16:48.998 | INFO     | model.pipeline.model:_save_model:166 - Saving a model to a directory : model\models/rf_db_v3
+2025-03-06 13:17:22.178 | INFO     | __main__:main:22 - running the aplication
+2025-03-06 13:17:22.179 | INFO     | model.model_inference:load_model:41 - checking the existence of the model config file at model\models/rf_db_v3
+2025-03-06 13:17:22.180 | INFO     | model.model_inference:load_model:52 - model rf_db_v3 exists! -> loading model configuration file
+2025-03-06 13:17:24.559 | INFO     | model.model_inference:predict:73 - making prediction
+2025-03-06 13:17:24.684 | INFO     | __main__:main:38 - Prediction = [2232.13651126]
+2025-03-06 13:18:11.483 | INFO     | __main__:main:22 - running the aplication
+2025-03-06 13:18:11.484 | INFO     | model.model_inference:load_model:41 - checking the existence of the model config file at model\models/rf_db_v3
+2025-03-06 13:18:11.485 | ERROR    | __main__:<module>:42 - An error has been caught in function '<module>', process 'MainProcess' (10528), thread 'MainThread' (9140):
+Traceback (most recent call last):
+
+> File "C:\Users\ibrahim\00001- ML Engenering\Reminder\9-capter4\project\src\runner_inference.py", line 42, in <module>
+    main()
+    └ <function main at 0x00000132C30D9F80>
+
+  File "C:\Users\ibrahim\00001- ML Engenering\Reminder\9-capter4\project\src\runner_inference.py", line 24, in main
+    ml_svc.load_model()
+    │      └ <function ModelInferenceService.load_model at 0x00000132C54C0720>
+    └ <model.model_inference.ModelInferenceService object at 0x00000132C7483C80>
+
+  File "C:\Users\ibrahim\00001- ML Engenering\Reminder\9-capter4\project\src\model\model_inference.py", line 50, in load_model
+    raise FileNotFoundError('Model file does not found')
+
+FileNotFoundError: Model file does not found
+2025-03-06 13:19:43.688 | INFO     | __main__:main:22 - running the aplication
+2025-03-06 13:19:43.713 | INFO     | model.model_builder:train_model:40 - checking the existence of the model config file at model\models/rf_db_v3
+2025-03-06 13:19:43.713 | INFO     | model.pipeline.model:build_model:34 - starting up model building pipeline
+2025-03-06 13:19:43.714 | INFO     | model.pipeline.preparation:prepare_data:16 - starting up preparation pipeline
+2025-03-06 13:19:43.714 | INFO     | model.pipeline.collection:load_data_from_db:25 - extracting the table from the database
+2025-03-06 13:19:44.428 | INFO     | model.pipeline.preparation:_decode_cat_cols:33 - encoding categorical colmn: ['balcony', 'parking', 'furnished', 'garage', 'storage']
+2025-03-06 13:19:44.547 | INFO     | model.pipeline.preparation:_parse_garden_col:52 - parsing garden column
+2025-03-06 13:19:44.547 | INFO     | model.pipeline.model:_get_x_y:81 - Defining X and y variable. X vars: ['area', 'constraction_year', 'bedrooms', 'garden', 'balcony_yes', 'parking_yes', 'furnished_yes', 'garage_yes', 'storage_yes'] Y var: rent
+2025-03-06 13:19:44.552 | INFO     | model.pipeline.model:_split_train_test:100 - Spliting data into train and test sets
+2025-03-06 13:19:44.573 | INFO     | model.pipeline.model:_train_model:113 - train the model with hyperparameters
+2025-03-06 13:19:44.573 | DEBUG    | model.pipeline.model:_train_model:116 - grid_space :{'n_estimators': [100, 200, 300], 'max_depth': [3, 6, 9, 12]}
+2025-03-06 13:20:34.894 | INFO     | model.pipeline.model:_evaluation_model:151 - evaluating model performance. SCORE=0.7719048228445553
+2025-03-06 13:20:34.894 | INFO     | model.pipeline.model:_save_model:166 - Saving a model to a directory : model\models/rf_db_v3
+2025-03-06 13:22:02.305 | INFO     | __main__:main:22 - running the aplication
+2025-03-06 13:22:02.307 | INFO     | model.model_inference:load_model:41 - checking the existence of the model config file at model\models/rf_db_v3
+2025-03-06 13:22:02.307 | INFO     | model.model_inference:load_model:52 - model rf_db_v3 exists! -> loading model configuration file
+2025-03-06 13:22:04.583 | INFO     | model.model_inference:predict:73 - making prediction
+2025-03-06 13:22:04.646 | INFO     | __main__:main:38 - Prediction = [2020.95912978]
